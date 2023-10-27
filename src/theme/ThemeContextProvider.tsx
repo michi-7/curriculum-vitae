@@ -3,16 +3,19 @@ import {
 	createTheme,
 } from '@mui/material/styles'
 import { createContext, useMemo, useState } from 'react'
-import { ThemeProvider as SCThemeProvider } from 'styled-components'
 
+import commonTheme from './commonTheme'
 import darkTheme from './darkTheme'
 import { ThemeContextProviderProps, ThemeVariant } from './types'
 
 declare module '@mui/material/styles' {
-	interface TypeBackground {
-		default: string
-		secondary: string
-		paper: string
+	interface Palette {
+		contrastText: string
+		contrastBackground: string
+	}
+	interface PaletteOptions {
+		contrastText: string
+		contrastBackground: string
 	}
 }
 
@@ -32,17 +35,15 @@ const ThemeContextProvider = ({ children }: ThemeContextProviderProps) => {
 	const muiTheme = useMemo(
 		() =>
 			createTheme({
-				...(theme === 'dark' ? darkTheme : darkTheme),
-				spacing: 4,
+				...commonTheme,
+				palette: theme === 'dark' ? darkTheme : darkTheme,
 			}),
 		[theme],
 	)
 
 	return (
 		<ThemeContext.Provider value={contextValue}>
-			<MuiThemeProvider theme={muiTheme}>
-				<SCThemeProvider theme={muiTheme}>{children}</SCThemeProvider>
-			</MuiThemeProvider>
+			<MuiThemeProvider theme={muiTheme}>{children}</MuiThemeProvider>
 		</ThemeContext.Provider>
 	)
 }

@@ -24,19 +24,13 @@ export const PaperContainer = styled(Paper)(() => ({
 	display: 'flex',
 }))
 
-export const Left = styled('div')(({ theme }) => ({
-	display: 'flex',
-	flexDirection: 'column',
-	gap: theme.spacing(4),
-	padding: theme.spacing(4),
-	borderTopLeftRadius: theme.shape.borderRadius,
-	borderBottomLeftRadius: theme.shape.borderRadius,
-	backgroundColor: theme.palette.background.paper,
-}))
+type FlexProps = {
+	gap?: number
+}
 
-export const Right = styled('div')(({ theme }) => ({
-	padding: theme.spacing(4),
-	borderTopRightRadius: theme.shape.borderRadius,
-	borderBottomRightRadius: theme.shape.borderRadius,
-	backgroundColor: theme.palette.background.secondary,
+export const FlexRow = styled('div')<FlexProps>(({ gap }) => ({
+	display: 'flex',
+	flexDirection: 'row',
+	alignItems: 'center',
+	gap,
 }))
