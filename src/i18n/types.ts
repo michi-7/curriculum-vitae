@@ -2,10 +2,12 @@ import { ReactNode } from 'react'
 
 export type Lang = 'it' | 'en'
 
+export type TranslateFunc = (k: TranslationKey) => string
+
 export type LangContextType = {
 	lang: Lang
 	changeLang: () => void
-	t: (k: TranslationKey) => string
+	t: TranslateFunc
 }
 
 export type LangContextProviderProps = {

@@ -3,8 +3,13 @@ import Typography from '@mui/material/Typography'
 import { FaEnvelope, FaPhone } from 'react-icons/fa6'
 
 import useTranslate from '../../i18n/useTranslate'
-import { FlexRow } from '../App.styled'
-import { AvatarContainer, LeftContainer, MainInfo } from './LeftSide.styled'
+import InfoRow from './InfoRow'
+import {
+	AvatarContainer,
+	ContactRow,
+	LeftContainer,
+	MainInfo,
+} from './LeftSide.styled'
 
 const LeftSide = (): JSX.Element => {
 	const t = useTranslate()
@@ -16,18 +21,22 @@ const LeftSide = (): JSX.Element => {
 			</AvatarContainer>
 			<MainInfo>
 				<Typography variant='button'>{t('personalInfo')}</Typography>
-				<Typography>{t('birthDate')}: 07/03/1992</Typography>
-				<Typography>{t('birthPlace')}: Portomaggiore (FE)</Typography>
-				<Typography>{t('citizenship')}: Italiana</Typography>
-				<Typography variant='button'>{t('contacts')}</Typography>
-				<FlexRow gap={4}>
+
+				<InfoRow labelKey='birthDate' text='07/03/1992' />
+				<InfoRow labelKey='birthPlace' text='Portomaggiore, Ferrara (FE)' />
+				<InfoRow labelKey='citizenship' text='Italiana' />
+
+				<Typography variant='button' style={{ marginTop: 16 }}>
+					{t('contacts')}
+				</Typography>
+				<ContactRow>
 					<FaEnvelope />
 					<Typography>michele.menegatti7@gmail.com</Typography>
-				</FlexRow>
-				<FlexRow gap={4}>
+				</ContactRow>
+				<ContactRow>
 					<FaPhone />
 					<Typography>+39 3491083432</Typography>
-				</FlexRow>
+				</ContactRow>
 			</MainInfo>
 		</LeftContainer>
 	)

@@ -9,7 +9,6 @@ export const AppContainer = styled('div')(({ theme }) => ({
 	display: 'flex',
 	flexDirection: 'row',
 	justifyContent: 'center',
-
 	color: theme.palette.text.primary,
 	backgroundColor: theme.palette.background.default,
 	padding: theme.spacing(12),
@@ -22,15 +21,5 @@ export const AppContainer = styled('div')(({ theme }) => ({
 
 export const PaperContainer = styled(Paper)(() => ({
 	display: 'flex',
-}))
-
-type FlexProps = {
-	gap?: number
-}
-
-export const FlexRow = styled('div')<FlexProps>(({ gap }) => ({
-	display: 'flex',
-	flexDirection: 'row',
-	alignItems: 'center',
-	gap,
+	width: '60%',
 }))
