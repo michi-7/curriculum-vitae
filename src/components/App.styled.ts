@@ -9,6 +9,7 @@ export const AppContainer = styled('div')(({ theme }) => ({
 	display: 'flex',
 	flexDirection: 'row',
 	justifyContent: 'center',
+	position: 'relative',
 	color: theme.palette.text.primary,
 	backgroundColor: theme.palette.background.default,
 	padding: theme.spacing(12),

@@ -6,7 +6,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import App from './components/App'
-import LangContextProvider from './i18n/LangProvider'
+import { LangContextProvider } from './i18n'
 import ThemeContextProvider from './theme/ThemeContextProvider'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

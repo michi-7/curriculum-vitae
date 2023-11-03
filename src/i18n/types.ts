@@ -17,11 +17,12 @@ export type LangContextProviderProps = {
 export const translationKeys = [
 	'birthDate',
 	'birthPlace',
+	'changeLang',
+	'citizenship',
+	'contacts',
 	'name',
 	'personalInfo',
 	'surname',
-	'citizenship',
-	'contacts',
 ] as const
 
 export type TranslationKey = (typeof translationKeys)[number]

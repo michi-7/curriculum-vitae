@@ -2,7 +2,7 @@ import Avatar from '@mui/material/Avatar'
 import Typography from '@mui/material/Typography'
 import { FaEnvelope, FaPhone } from 'react-icons/fa6'
 
-import useTranslate from '../../i18n/useTranslate'
+import { useTranslate } from '../../i18n'
 import InfoRow from './InfoRow'
 import {
 	AvatarContainer,

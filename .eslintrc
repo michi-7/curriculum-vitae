@@ -8,8 +8,9 @@
 	],
 	"ignorePatterns": ["dist", ".eslintrc"],
 	"parser": "@typescript-eslint/parser",
-	"plugins": ["react-hooks"],
+	"plugins": ["react-hooks", "sort-destructure-keys"],
 	"rules": {
+		"sort-destructure-keys/sort-destructure-keys": 2,
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": "error",
 		"no-unused-vars": "off",
