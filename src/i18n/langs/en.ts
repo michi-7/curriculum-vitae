@@ -8,7 +8,10 @@ const en: LanguageTranslation = {
 	contacts: 'Contacts',
 	name: 'Name',
 	personalInfo: 'personal info',
+	residence: 'Residence',
+	softSkills: 'Soft skills',
 	surname: 'Surname',
+	workExperiences: 'Work experience',
 }
 
 export default en

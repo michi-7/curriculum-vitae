@@ -23,8 +23,9 @@ const LeftSide = (): JSX.Element => {
 				<Typography variant='button'>{t('personalInfo')}</Typography>
 
 				<InfoRow labelKey='birthDate' text='07/03/1992' />
-				<InfoRow labelKey='birthPlace' text='Portomaggiore, Ferrara (FE)' />
+				<InfoRow labelKey='birthPlace' text='Portomaggiore (FE)' />
 				<InfoRow labelKey='citizenship' text='Italiana' />
+				<InfoRow labelKey='residence' text='Bergamo' />
 
 				<Typography variant='button' style={{ marginTop: 16 }}>
 					{t('contacts')}

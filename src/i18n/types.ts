@@ -22,7 +22,10 @@ export const translationKeys = [
 	'contacts',
 	'name',
 	'personalInfo',
+	'residence',
+	'softSkills',
 	'surname',
+	'workExperiences',
 ] as const
 
 export type TranslationKey = (typeof translationKeys)[number]
